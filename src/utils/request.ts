@@ -49,8 +49,8 @@ request.interceptors.response.use(
 	}
 )
 
-export const requestListImages = (data : ImgReq): Promise<ImgList> => request.post('/rest/list', data)
-export const requestUploadImages = (data: FormData) : Promise<ImgItem[]> => request.post('/rest/upload', data)
-export const createFolder = (data: Folder) => request.post('/rest/folder', data)
-export const checkToken = (data: AuthToken) => request.post('/rest/checkToken', data)
-export const requestDeleteImage = (data: ImgDel) => request.delete('/rest', { data })
+export const requestListImages = (data : ImgReq): Promise<ImgList> => request.post('/list', data)
+export const requestUploadImages = (data: FormData) : Promise<ImgItem[]> => request.post('/upload', data)
+export const createFolder = (data: Folder) => request.post('/folder', data)
+export const checkToken = (data: AuthToken) => request.post('/checkToken', data)
+export const requestDeleteImage = (data: ImgDel) => request.delete('/', { data })
